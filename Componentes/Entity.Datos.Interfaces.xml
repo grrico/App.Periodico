@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Entity.Datos.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="T:Entity.Datos.Interfaces.IRepositorioGenerico`1">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.ObtenerTodos``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IOrderedQueryable{``0}},System.Int32)">
+            <summary>
+            Obtiene todos los registros de la entidad
+            </summary>
+            <typeparam name="Y">Tipo de entidad que retorna</typeparam>
+            <param name="orderByCondition"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.ObtenerTodosPorCondicion``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IOrderedQueryable{``0}},System.Int32)">
+            <summary>
+            Obitene todos los registros de la entidad que cumplan con la condicion especificada
+            </summary>
+            <typeparam name="Y">Tipo de entidad que retorna</typeparam>
+            <param name="predicate">Condición para la búsqueda</param>
+            <param name="orderByCondition"></param>
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.ObtenerPorIdAsync``1(System.Object)">
+            <summary>
+            Obtiene un registro por su identificador primario
+            </summary>
+            <typeparam name="Y">Tipo de entidad que retorna</typeparam>
+            <param name="id">Identificador de la entidad</param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.ObtenerEntidadPorCondicionAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Obtiene un registro por una condición
+            </summary>
+            <typeparam name="Y">Tipo de entidad que retorna</typeparam>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.ObtenerEntidadPorCondicion``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Obtiene un registro por una condición
+            </summary>
+            <typeparam name="Y">Tipo de entidad que retorna</typeparam>
+            <param name="predicate"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.Crear``1(``0,System.Boolean)">
+            <summary>
+            Agrega una entidad al contexto y la graba en la base de dato si se especifica (<paramref name="guardar"/> = true)
+            </summary>
+            <typeparam name="Y">Representa el tipo de la entidad</typeparam>
+            <param name="entity">Entidad que se quiere crear</param>
+            <param name="guardar">Determina si se graba en la base de datos</param>
+            <returns>Retorna la entidad creada</returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.Eliminar``1(``0,System.Boolean)">
+            <summary>
+            Elimina una entidad
+            </summary>
+            <typeparam name="Y"></typeparam>
+            <param name="entity"></param>
+            <param name="guardar">Determina si se graba en la base de datos</param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.Editar``1(``0,System.Boolean)">
+            <summary>
+            Edita una entidad
+            </summary>
+            <typeparam name="Y"></typeparam>
+            <param name="entity"></param>
+            <param name="guardar">Determina si se graba en la base de datos</param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.EjecutarProcedimiento``2(System.String,``1)">
+            <summary>
+            Ejecuta un procedimiento almacenado
+            </summary>
+            <typeparam name="ZItem">Tipo de entidad que retorna el procedimiento</typeparam>        
+            <typeparam name="YParam">Tipo de entidad que contiene los parametros del procedimiento</typeparam>
+            <param name="storedProcedureName">Nombre del procedimiento</param>
+            <param name="entidad">Entidad que contiene los parametros del procedimiento</param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.EjecutarProcedimiento``1(System.String)">
+            <summary>
+            Ejecuta un procedimiento almacenado
+            </summary>
+            <typeparam name="ZItem">Tipo de entidad que retorna el procedimiento</typeparam>                
+            <param name="storedProcedureName">Nombre del procedimiento</param>        
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IRepositorioGenerico`1.EjecutarProcedimiento``1(System.String,``0)">
+            <summary>
+            
+            </summary>
+            <param name="storedProcedureName"></param>
+            <param name="entidad"></param>        
+            <returns></returns>
+        </member>
+        <member name="T:Entity.Datos.Interfaces.IUnidadTrabajo">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IUnidadTrabajo.GuardarCambios">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.Interfaces.IUnidadTrabajo.GuardarCambiosAsync">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

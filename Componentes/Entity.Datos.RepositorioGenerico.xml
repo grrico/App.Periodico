@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Entity.Datos.RepositorioGenerico</name>
+    </assembly>
+    <members>
+        <member name="T:Entity.Datos.RepositorioGenerico`2">
+            <summary>
+            Clase base con la implementación de la interface <see cref="!:IRepositorioGenerico"/>
+            </summary>
+            <typeparam name="Contexto">Clase que hereda de <see cref="T:System.Data.Entity.DbContext"/></typeparam>
+            <typeparam name="Entidad">Entidad que representa una tabla</typeparam>
+        </member>
+        <member name="M:Entity.Datos.RepositorioGenerico`2.ObtenerTodos``1(System.Func{System.Linq.IQueryable{``0},System.Linq.IOrderedQueryable{``0}},System.Int32)">
+            <summary>
+            Obtiene todos los registros de la entidad
+            </summary>
+            <typeparam name="Y">Tipo de entidad que retorna</typeparam>
+            <param name="orderByCondition"></param>
+            <param name="top">Cantidad de registros que se desean retornar. Si no se especifica se obtienen todos.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.RepositorioGenerico`2.ObtenerTodosPorCondicion``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},System.Func{System.Linq.IQueryable{``0},System.Linq.IOrderedQueryable{``0}},System.Int32)">
+            <summary>
+            Obitene todos los registros de la entidad que cumplan con la condicion especificada
+            </summary>
+            <typeparam name="Y">Tipo de entidad que retorna</typeparam>
+            <param name="predicate">Condición para la búsqueda</param>
+            <param name="orderByCondition">Sentencia de ordenamiento</param>        
+            <param name="top"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.RepositorioGenerico`2.ObtenerPorIdAsync``1(System.Object)">
+            <summary>
+            Obtiene un registro por su identificador primario
+            </summary>
+            <typeparam name="Y">Tipo de entidad que retorna</typeparam>
+            <param name="id">Identificador de la entidad</param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.RepositorioGenerico`2.Crear``1(``0,System.Boolean)">
+            <summary>
+            Agrega una entidad al contexto y la graba en la base de dato si se especifica (<paramref name="guardar"/> = true)
+            </summary>
+            <typeparam name="Y">Tipo de entidad que retorna</typeparam>
+            <param name="entity">Entidad que se quiere crear</param>
+            <param name="guardar">Determina si se graba en la base de datos</param>
+            <returns>Retorna la entidad creada</returns>
+        </member>
+        <member name="M:Entity.Datos.RepositorioGenerico`2.Eliminar``1(``0,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="Y"></typeparam>
+            <param name="entity"></param>
+            <param name="guardar"></param>
+        </member>
+        <member name="M:Entity.Datos.RepositorioGenerico`2.Editar``1(``0,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <typeparam name="Y"></typeparam>
+            <param name="entity"></param>
+            <param name="guardar"></param>
+        </member>
+        <member name="M:Entity.Datos.RepositorioGenerico`2.EjecutarProcedimiento``2(System.String,``1)">
+            <summary>
+            Ejecuta un procedimiento almacenado
+            </summary>
+            <typeparam name="ZItem">Tipo de entidad que retorna el procedimiento</typeparam>
+            <typeparam name="YParam">Tipo de entidad que contiene los parametros del procedimiento</typeparam>
+            <param name="storedProcedureName"></param>
+            <param name="entidad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.RepositorioGenerico`2.EjecutarProcedimiento``1(System.String)">
+            <summary>
+            Ejecuta un procedimiento almacenado
+            </summary>
+            <typeparam name="ZItem">Tipo de entidad que retorna el procedimiento</typeparam>        
+            <param name="storedProcedureName"></param>        
+            <returns></returns>
+        </member>
+        <member name="M:Entity.Datos.RepositorioGenerico`2.EjecutarProcedimiento``1(System.String,``0)">
+            <summary>
+            Ejecuta un procedimiento almacenado
+            </summary>
+            <param name="storedProcedureName"></param>
+            <param name="parametros"></param>
+        </member>
+    </members>
+</doc>

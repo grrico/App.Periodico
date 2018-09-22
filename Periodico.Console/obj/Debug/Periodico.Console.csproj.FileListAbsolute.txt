@@ -1,0 +1,14 @@
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\bin\Debug\Periodico.Console.exe.config
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\bin\Debug\Periodico.Console.exe
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\bin\Debug\Periodico.Console.pdb
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\obj\Debug\Periodico.Console.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\obj\Debug\Periodico.Console.exe
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\obj\Debug\Periodico.Console.pdb
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\bin\Debug\EntityFramework.dll
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\bin\Debug\EntityFramework.SqlServer.dll
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\bin\Debug\EntityFramework.xml
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\bin\Debug\EntityFramework.SqlServer.xml
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\bin\Debug\es\EntityFramework.resources.dll
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\bin\Debug\es\EntityFramework.SqlServer.resources.dll
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\obj\Debug\Periodico.Console.csprojAssemblyReference.cache
+C:\Desarrollo\Desarrollo_GRR\Mvc\Periodico\Periodico.Console\obj\Debug\Periodico.Console.csproj.CopyComplete

@@ -2,3 +2,59 @@
 <button class="btn btn-warning" (click)="show=!show" >Acción</button>
 <p class="text-info" *ngIf="show">Las cookies son importantes para el correcto funcionamiento de un sitio. Para mejorar su experiencia, utilizamos cookies para recordar los detalles del inicio de sesión y garantizar un inicio de sesión seguro, recoger estadísticas a fin de optimizar la funcionalidad del sitio y proporcionar contenido personalizado según sus intereses. Haga clic en Aceptar y Continuar para aceptar las cookies e ir directamente al sitio o haga clic en Ver configuración de cookies para ver la descripción detallada de los tipos de cookies que utilizamos y elegir si desea aceptar determinadas cookies mientras permanece en el sitio.</p>
 <p class="text-danger">Las cookies son importantes para el correcto funcionamiento de un sitio. Para mejorar su experiencia, utilizamos cookies para recordar los detalles del inicio de sesión y garantizar un inicio de sesión seguro, recoger estadísticas a fin de optimizar la funcionalidad del sitio y proporcionar contenido personalizado según sus intereses. Haga clic en Aceptar y Continuar para aceptar las cookies e ir directamente al sitio o haga clic en Ver configuración de cookies para ver la descripción detallada de los tipos de cookies que utilizamos y elegir si desea aceptar determinadas cookies mientras permanece en el sitio.</p>
+
+<!-- 
+<p>varible boolean:</p>
+<ul>
+    <li *ngIf="activado" >
+        activado
+    </li>
+</ul>
+<ul>
+    <app-user *ngFor="let user of users" [nameUser]="user">
+    </app-user>
+</ul>
+-->
+
+<button (click)="metodoHola()" >Click me!</button>
+
+<div>
+        <form>
+            <input type="text" name="nameUsr"  [(ngModel)]="nameUsrTs">
+            <input type="text" name="ageUsr" [(ngModel)]="ageUsrTs">
+        </form>
+
+        <p>name usr: {{nameUsrTs}} <br>
+        age usr: {{ageUsrTs}}</p>
+
+        <p>name: {{name}}</p>
+        <p>age; {{age}}</p>
+
+        <p>street: {{address.street}}</p>
+        <p>city: {{address.city}}</p>
+        <p>hobbies:</p>
+        <ul>
+            <li *ngFor="let hobby of hobbies">{{hobby}}</li>
+        </ul>
+</div>
+    
+<form (submit)="AddUser(newUser)">
+    <input type="text"  #newUser>
+    <button>
+        Enviar
+    </button>
+</form>
+
+<p>Arreglo de usuarios:</p>
+<ul>
+    <li *ngFor="let user of users">
+        {{user}} <button (click)="DeleleUser(user)">Delete</button>
+    </li>
+</ul>
+
+<hr>
+
+<div *ngFor="let post of posts">
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.id }} - {{ post.body }} </p>
+</div>

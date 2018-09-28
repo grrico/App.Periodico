@@ -1,12 +1,12 @@
 <mat-toolbar color = "Purple">
   <mat-toolbar-row>
+    <h1>{{title}}</h1> 
     <span>AngularJS Material</span>
     <span class="example-spacer"></span>
     <mat-icon class="example-icon">favorite</mat-icon>
     <mat-icon class="example-icon">delete</mat-icon>
   </mat-toolbar-row>
 </mat-toolbar>
-
 <button mat-button [matMenuTriggerFor]="menu">Menu</button>
 <mat-menu #menu="matMenu">
   <button mat-menu-item>Item 1</button>

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-
+  title = 'Welcome to Periodico-Angular 6 Material'
   constructor() { }
 
   ngOnInit() {

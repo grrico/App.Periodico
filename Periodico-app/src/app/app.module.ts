@@ -8,12 +8,13 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {MaterialModule} from './Material';
+
 import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { FooterComponent } from './footer/footer.component';
 import { BodyComponent } from './body/body.component';
 import { UserComponent } from './user/user.component';
 import { DataUsrServiceApi } from './body/data-usr.service';
-import { AboutComponent } from './body/about/about.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Route[] = [
  { path:'', component: BodyComponent },

@@ -1,0 +1,52 @@
+.mdl-cell{
+    background-color: grey;
+    color:#FFF;
+}
+
+table {
+  width: 100%;
+}
+
+tr.grid-detail-row {
+  height: 0;
+}
+
+tr.grid-element-row:not(.grid-expanded-row):hover {
+  background: #f5f5f5;
+}
+
+tr.grid-element-row:not(.grid-expanded-row):active {
+  background: #efefef;
+}
+
+.grid-element-row td {
+  border-bottom-width: 0;
+}
+
+.grid-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+
+.grid-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.grid-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.grid-element-description {
+  padding: 16px;
+}
+
+.grid-element-description-attribution {
+  opacity: 0.5;
+}

@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { animate, state, style, transition, trigger} from '@angular/animations';
 
-import {PageEvent} from '@angular/material';
+import {MatSort} from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -18,10 +18,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AboutComponent implements OnInit {
   dataSource = ELEMENT_DATA;
-  columnsToENDisplay = ['name', 'weight', 'symbol', 'position'];
   columnsToDisplay = ['nombre', 'peso', 'simbolo', 'posicion'];
+  @ViewChild(MatSort) sort: MatSort;
   expandedElement: PeriodicElement | null;
-
   ngOnInit() {
   }
 
@@ -80,7 +79,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     peso: 12.0107,
     simbolo: 'C',
     description: `Carbon is a chemical element with symbol C and atomic number 6. It is nonmetallic
-        and tetravalent—making four electrons available to form covalent chemical bonds. It belongs
+        and tetravalentï¿½making four electrons available to form covalent chemical bonds. It belongs
         to group 14 of the periodic table.`
   }, {
     posicion: 7,

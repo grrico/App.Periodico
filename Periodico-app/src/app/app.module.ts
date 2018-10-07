@@ -7,7 +7,7 @@ import { RouterModule, Route } from '@angular/router'
 import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import {MaterialModule} from './Material';
+import {MaterialModule} from './material/material.module';
 
 import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { FooterComponent } from './footer/footer.component';

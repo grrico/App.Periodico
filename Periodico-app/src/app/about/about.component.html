@@ -6,45 +6,7 @@
     </div>
     
     <div class="mat-elevation-z8">
-      <table  
-          mat-table [dataSource]="dataSource" multiTemplateDataRows  matSort>
-      <ng-container matColumnDef="{{column}}" *ngFor="let column of columnsToDisplay">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> {{column}} </th>
-        <td mat-cell *matCellDef="let element"> {{element[column]}} </td>
-      </ng-container>
-        
-        <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
-        <ng-container matColumnDef="expandedDetail">
-          <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
-            <div class="grid-element-detail"
-                [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
-              <div class="grid-element-diagram">
-                <div class="grid-element-position"> {{element.posicion}} </div>
-                <div class="grid-element-symbol"> {{element.simbolo}} </div>
-                <div class="grid-element-name"> {{element.nombre}} </div>
-                <div class="grid-element-weight"> {{element.peso}} </div>
-              </div>
-              <div class="grid-element-description">
-                {{element.description}}
-                <span class="grid-element-description-attribution"> -- Wikipedia </span>
-              </div>
-            </div>
-          </td>
-        </ng-container>
-
-        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-        <tr mat-row *matRowDef="let element; columns: columnsToDisplay;"
-            class="grid-element-row"
-            [class.grid-expanded-row]="expandedElement === element"
-            (click)="expandedElement = element">
-        </tr>
-        <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="grid-detail-row"></tr>
-      </table>
-  
-    </div>
-
-    <div class="mat-elevation-z8">
-        <mat-table [dataSource]="dataSource"  matSort>
+        <mat-table [dataSource]="listData"  matSort>
             <ng-container matColumnDef="nombre">
               <mat-header-cell *matHeaderCellDef  mat-sort-header>nombre</mat-header-cell>
               <mat-cell *matCellDef="let element">{{element.nombre}}</mat-cell>
@@ -58,11 +20,29 @@
               <mat-cell *matCellDef="let element">{{element.simbolo}}</mat-cell>
             </ng-container>
             <ng-container matColumnDef="posicion">
-              <mat-header-cell *matHeaderCellDef mat-sort-header>posicion</mat-header-cell>
+              <mat-header-cell *matHeaderCellDef>posicion</mat-header-cell>
               <mat-cell *matCellDef="let element">{{element.posicion}}</mat-cell>
             </ng-container>
+            
+            <ng-container matColumnDef="loading">
+              <mat-footer-cell *matFooterCellDef colspan="6">
+                loading data ...
+              </mat-footer-cell>
+            </ng-container>
+            
+            <ng-container matColumnDef="noData">  
+                <mat-footer-cell *matFooterCellDef colspan="6">
+                No Data.
+                </mat-footer-cell>
+            </ng-container>
+
+            
             <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
-            <mat-row *matRowDef="let row; columns: columnsToDisplay;"></mat-row>
-       
-           </mat-table>      
+            <mat-row *matRowDef="let row; columns: columnsToDisplay;"></mat-row>       
+          
+            <mat-footer-row *matFooterRowDef="['loading']" [ngClass]="{'hide':listData!=null}"></mat-footer-row>
+            <mat-footer-row *matFooterRowDef="['noData']" [ngClass]="{'hide':!(listData!=null && listData.data.length==0)}"></mat-footer-row>
+
+          </mat-table>      
+          <mat-paginator [pageSizeOptions]="[3,5, 6, 10, 25, 100]" [pageSize]="3" showFirstLastButtons></mat-paginator>
     </div>

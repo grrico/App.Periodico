@@ -9,7 +9,7 @@ import { PostUsr } from './UsrPost';
 export class DataUsrServiceApi {
 
   constructor(private httpClient: HttpClient) { 
-    console.log('service esta trabajando!');
+    // console.log('service esta trabajando!');
   }
 
   getDataUsr(){

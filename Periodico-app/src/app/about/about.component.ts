@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { animate, state, style, transition, trigger} from '@angular/animations';
 
-import {MatSort} from '@angular/material';
+import {MatSort, MatTableDataSource, MatPaginator} from '@angular/material';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -17,11 +17,24 @@ import { HttpClient } from '@angular/common/http';
   ],
 })
 export class AboutComponent implements OnInit {
+  
   dataSource = ELEMENT_DATA;
+  listData: MatTableDataSource<any>;
+
   columnsToDisplay = ['nombre', 'peso', 'simbolo', 'posicion'];
+  
   @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
   expandedElement: PeriodicElement | null;
+  
   ngOnInit() {
+    
+    this.listData = new MatTableDataSource(this.dataSource);
+    this.listData.sort = this.sort;
+    this.listData.paginator = this.paginator;
+
+    console.log('Cantidad:' + this.listData.data.length);
   }
 
 }

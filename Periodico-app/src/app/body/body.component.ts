@@ -49,9 +49,6 @@ export class BodyComponent implements OnInit {
   constructor(private dataUsrService: DataUsrServiceApi) { 
     
     this.dataUsrService.getDataUsr().subscribe(dataUsrService => {
-      
-      //console.log(dataUsrService);
-      
       this.posts=dataUsrService;
     });
 

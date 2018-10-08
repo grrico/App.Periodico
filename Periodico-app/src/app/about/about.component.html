@@ -40,4 +40,29 @@
         </tr>
         <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="grid-detail-row"></tr>
       </table>
-  </div>
+  
+    </div>
+
+    <div class="mat-elevation-z8">
+        <mat-table [dataSource]="dataSource"  matSort>
+            <ng-container matColumnDef="nombre">
+              <mat-header-cell *matHeaderCellDef  mat-sort-header>nombre</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.nombre}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="peso">
+              <mat-header-cell *matHeaderCellDef  mat-sort-header>peso</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.peso}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="simbolo">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>simbolo</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.simbolo}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="posicion">
+              <mat-header-cell *matHeaderCellDef mat-sort-header>posicion</mat-header-cell>
+              <mat-cell *matCellDef="let element">{{element.posicion}}</mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: columnsToDisplay;"></mat-row>
+       
+           </mat-table>      
+    </div>

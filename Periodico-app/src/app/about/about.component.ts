@@ -25,6 +25,7 @@ export class AboutComponent implements OnInit {
   
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;
+  searchKey: string;
 
   expandedElement: PeriodicElement | null;
   
@@ -35,6 +36,15 @@ export class AboutComponent implements OnInit {
     this.listData.paginator = this.paginator;
 
     console.log('Cantidad:' + this.listData.data.length);
+  }
+
+  onSearchClear() {
+    this.searchKey = "";
+    this.applyFilter();
+  }
+
+  applyFilter() {
+    this.listData.filter = this.searchKey.trim().toLowerCase();
   }
 
 }

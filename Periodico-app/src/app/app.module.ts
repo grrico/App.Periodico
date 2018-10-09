@@ -15,6 +15,7 @@ import { BodyComponent } from './body/body.component';
 import { UserComponent } from './user/user.component';
 import { DataUsrServiceApi } from './body/data-usr.service';
 import { AboutComponent } from './about/about.component';
+import { EstadoComponent } from './periodico/estado/estado.component';
 
 const routes: Route[] = [
  { path:'', component: BodyComponent },
@@ -28,6 +29,7 @@ const routes: Route[] = [
     BodyComponent,
     UserComponent,
     AboutComponent,
+    EstadoComponent,
   ],
   imports: [
     BrowserModule,

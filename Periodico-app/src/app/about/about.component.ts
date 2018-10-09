@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
   dataSource = ELEMENT_DATA;
   listData: MatTableDataSource<any>;
 
-  columnsToDisplay = ['nombre', 'peso', 'simbolo', 'posicion'];
+  columnsToDisplay = ['nombre', 'peso', 'simbolo', 'posicion','actions'];
   
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatPaginator) paginator: MatPaginator;

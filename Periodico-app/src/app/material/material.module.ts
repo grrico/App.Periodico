@@ -21,6 +21,7 @@ import * as Material from "@angular/material";
     Material.MatPaginatorModule,
     Material.MatSortModule,
     Material.MatMenuModule
+    
   ],
   exports: [
     Material.MatToolbarModule,

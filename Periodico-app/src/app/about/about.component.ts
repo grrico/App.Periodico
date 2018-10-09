@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { animate, state, style, transition, trigger} from '@angular/animations';
 
 import {MatSort, MatTableDataSource, MatPaginator} from '@angular/material';
-import { HttpClient } from '@angular/common/http';
+//import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-about',

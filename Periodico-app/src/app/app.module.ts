@@ -19,7 +19,8 @@ import { EstadoComponent } from './periodico/estado/estado.component';
 
 const routes: Route[] = [
  { path:'', component: BodyComponent },
- { path:'about', component: AboutComponent}
+ { path:'about', component: AboutComponent},
+ { path:'periodico', component: EstadoComponent}
 ]
 @NgModule({
   declarations: [

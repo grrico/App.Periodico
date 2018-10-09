@@ -16,7 +16,7 @@ namespace Periodico.WebApi.Controllers
 	using Periodico.Business.Model;
 	using Periodico.DTO;
 
-	[RoutePrefix("api/Estado")]
+	[Route("api/Estado")]
 	public class EstadoController : ApiController
 	{
 		public IInformacionEstadoBusiness informacionestado { get; set; }
@@ -26,7 +26,7 @@ namespace Periodico.WebApi.Controllers
 			informacionestado = new InformacionEstadoBusiness();
 		}
 
-		[HttpPost]
+		[HttpGet]
 		[ResponseType(typeof(EstadoRequest))]
 		[Route("EstadoGet/")]
 		public async Task<IHttpActionResult> EstadoGet(EstadoRequest estado)
@@ -62,7 +62,7 @@ namespace Periodico.WebApi.Controllers
 			}
 		}
 
-		[HttpPost]
+		[HttpGet]
 		[ResponseType(typeof(EstadoRequest))]
 		[Route("EstadoGetAll/")]
 		public async Task<IHttpActionResult> EstadoGetAll()
